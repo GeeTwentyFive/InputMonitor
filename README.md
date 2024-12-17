@@ -9,9 +9,9 @@ Binding:
 int InputMonitor__Bind(InputMonitor__target_type targetType, unsigned short target, int *OUT_state)
 ```
 
-`target` is one of libuiohook's key/mouse definitions.
+`target` is one of libuiohook's key/click definitions.
 
-Ex.: `VC_A`, `MOUSE_BUTTON1`, etc.
+^ Ex.: `VC_A`, `MOUSE_BUTTON1`, etc.
 
 Returns 1 upon success, & 0 upon failure.
 
