@@ -22,6 +22,10 @@ All bindings can be cleared via:
 InputMonitor__ClearBindings()
 ```
 
+<br>
+
+Maximum number of possible bindings can be changed by changing the constant: `INPUTMONITOR__MAX_BINDINGS` (default: 256) in `InputMonitor.h`.
+
 
 
 # Example:
