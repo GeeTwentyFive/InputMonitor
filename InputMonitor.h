@@ -6,7 +6,7 @@
 #include <stdio.h>
 #include <errno.h>
 
-#include "../../external/libuiohook/uiohook.h"
+#include "external/libuiohook/uiohook.h"
 
 
 
