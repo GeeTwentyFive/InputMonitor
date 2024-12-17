@@ -25,6 +25,10 @@ typedef enum {
 
 
 
+
+
+
+
 typedef struct {
 
         InputMonitor__target_type targetType;
@@ -141,7 +145,7 @@ int _InputMonitor_Init() {
 // Asynchronously monitors state of "target" key/click.
 // Sets *OUT_state to 1 or 0 if "target" key/click is pressed or released respectively.
 //
-// "target" is one of libuiohook's key/mouse definitions.
+// "target" is one of libuiohook's key/click definitions.
 // Ex.: VC_A, MOUSE_BUTTON1, etc.
 //
 int InputMonitor__Bind(InputMonitor__target_type targetType, unsigned short target, int *OUT_state) {
