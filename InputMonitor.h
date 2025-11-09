@@ -103,7 +103,7 @@ void* _InputMonitor_MonitorThread(void*) {
         int status = hook_run();
         // TODO: Return & handle error
         if (status != UIOHOOK_SUCCESS) {
-                printf("ERROR (0x%X): libuiohook - hook_run() - Failed to start input hook\nFILE: %s, LINE: %s\n", status, __FILE__, __LINE__);
+                printf("ERROR (0x%X): libuiohook - hook_run() - Failed to start input hook\nFILE: %s, LINE: %d\n", status, __FILE__, __LINE__);
         }
 
 }
@@ -124,7 +124,7 @@ int _InputMonitor_Init() {
 
         int status = pthread_create(&_InputMonitor_monitorThreadID, NULL, _InputMonitor_MonitorThread, NULL);
         if (status != 0) {
-                printf("ERROR (%i): pthread - pthread_create() - Failed to create input monitoring thread\nFILE: %s, LINE: %s\n", status, __FILE__, __LINE__);
+                printf("ERROR (%i): pthread - pthread_create() - Failed to create input monitoring thread\nFILE: %s, LINE: %d\n", status, __FILE__, __LINE__);
                 return 0;
         }
 
@@ -181,3 +181,4 @@ int InputMonitor__Bind(InputMonitor__target_type targetType, unsigned short targ
 void InputMonitor__ClearBindings() { _InputMonitor_setBindings = 0; }
 
 #endif // _INPUTMONITOR_H
+
